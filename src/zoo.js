@@ -1,7 +1,10 @@
 export class Animal {
 
-  constructor(species) {
+  constructor(name, species, hunger, health) {
+    this.name = name;
     this.species = species;
+    this.hunger = hunger;
+    this.health = health;
     this.tummyLevel = 10;
   }
 
@@ -11,7 +14,9 @@ export class Animal {
     }, 10000)
   }
 
-  feedAnimal() {
-    this.tummyLevel = 10;
+  feedAnimal(amount) {
+    while(this.tummyLevel < 10) {
+      this.tummyLevel++;
+    }
   }
 }
